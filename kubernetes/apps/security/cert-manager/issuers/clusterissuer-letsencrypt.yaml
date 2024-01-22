@@ -18,10 +18,10 @@ spec:
       #   apiTokenSecretRef:
       #     name: cloudflare-api-token-secret
       #      key: CF_API_TOKEN
-      selector:
-       dnsZones:
-         - '${EXTERNAL_DOMAIN}'
-           #- '${INTERNAL_DOMAIN}'
+        selector:
+         dnsZones:
+           - '${EXTERNAL_DOMAIN}'
+             #- '${INTERNAL_DOMAIN}'
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -42,7 +42,7 @@ spec:
       #   apiTokenSecretRef:
       #     name: cloudflare-api-token-secret
       #      key: CF_API_TOKEN
-      selector:
-       dnsZones:
-         - '${EXTERNAL_DOMAIN}'
-           #- '${INTERNAL_DOMAIN}'
+        selector:
+         dnsZones:
+           - '${EXTERNAL_DOMAIN}'
+             #- '${INTERNAL_DOMAIN}'
