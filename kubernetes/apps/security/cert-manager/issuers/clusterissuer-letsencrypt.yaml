@@ -12,7 +12,7 @@ spec:
     solvers:
       - http01:
           ingress:
-            class: nginx-external
+            ingressClassName: nginx-external
       #- dns01:
       # cloudflare:
       #   apiTokenSecretRef:
@@ -36,7 +36,7 @@ spec:
     solvers:
       - http01:
           ingress:
-            class: nginx-external
+            ingressClassName: nginx-external
       #- dns01:
       # cloudflare:
       #   apiTokenSecretRef:
