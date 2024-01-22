@@ -1,8 +1,8 @@
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
-namespace: network
+namespace: storage
 resources:
-  - ./certificate.yaml
+  - ./secret-synology-csi.sops.yaml
   - ./helmrelease.yaml
-  - ./networkpolicy.yaml
+

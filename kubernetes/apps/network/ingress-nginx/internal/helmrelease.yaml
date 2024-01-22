@@ -77,7 +77,6 @@ spec:
         ssl-protocols: "TLSv1.3 TLSv1.2"
         use-forwarded-headers: "true"
 
-
       metrics:
         enabled: true
         serviceMonitor:
@@ -86,8 +85,8 @@ spec:
           namespaceSelector:
             any: true
 
-              #extraArgs:
-              #default-ssl-certificate: "network/${SANITIZED_ORGANIZATION}-tls-internal"
+      extraArgs:
+        default-ssl-certificate: "network/${SANITIZED_ORGANIZATION}-tls-internal"
 
       topologySpreadConstraints:
         - maxSkew: 2
