@@ -4,29 +4,43 @@ creation_rules:
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*/secret-.*\.sops\.ya?ml
     encrypted_regex: "^(data|stringData)$"
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*\.sops\.yaml
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*\.sops\.ini
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*\.sops\.toml
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*\.sops\.json
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
   - path_regex: kubernetes/.*\.sops\.env
     key_groups:
       - age:
           - age19ay5dn0m46ya06gt2nwxk0mfcfvu2f3e66gadldnn3k06p7ys3gs25jfev
+        gcp_kms:
+          - resource_id: projects/dco-main/locations/global/keyRings/dyckshaus-keyring/cryptoKeys/sops    
 
