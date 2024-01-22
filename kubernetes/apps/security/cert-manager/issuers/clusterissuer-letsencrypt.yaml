@@ -10,14 +10,11 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-staging-account-key
     solvers:
-      - http01:
-          ingress:
-            ingressClassName: nginx-external
-      #- dns01:
-      # cloudflare:
-      #   apiTokenSecretRef:
-      #     name: cloudflare-api-token-secret
-      #      key: CF_API_TOKEN
+      - dns01:
+         cloudflare:
+           apiTokenSecretRef:
+             name: cloudflare-api-token-secret
+             key: CF_API_TOKEN
         selector:
          dnsZones:
            - '${EXTERNAL_DOMAIN}'
@@ -34,14 +31,11 @@ spec:
     privateKeySecretRef:
       name: letsencrypt-account-key
     solvers:
-      - http01:
-          ingress:
-            ingressClassName: nginx-external
-      #- dns01:
-      # cloudflare:
-      #   apiTokenSecretRef:
-      #     name: cloudflare-api-token-secret
-      #      key: CF_API_TOKEN
+      - dns01:
+          cloudflare:
+            apiTokenSecretRef:
+              name: cloudflare-api-token-secret
+              key: CF_API_TOKEN
         selector:
          dnsZones:
            - '${EXTERNAL_DOMAIN}'
