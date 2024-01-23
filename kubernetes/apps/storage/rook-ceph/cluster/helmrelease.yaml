@@ -96,13 +96,13 @@ spec:
         config:
           osdsPerDevice: "1"
         nodes:
-          - name: "jsdyb-nuc-001"
+          - name: "talos-001"
             devices:
               - name: "/dev/nvme0n1"
-          - name: "jsdyb-nuc-002"
+          - name: "talos-002"
             devices:
               - name: "/dev/nvme0n1"
-          - name: "jsdyb-nuc-003"
+          - name: "talos-003"
             devices:
               - name: "/dev/nvme0n1"
 
