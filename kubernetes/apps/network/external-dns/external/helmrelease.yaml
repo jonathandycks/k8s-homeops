@@ -21,7 +21,6 @@ spec:
 
     domainFilters:
       - ${EXTERNAL_DOMAIN}
-      - ${PROFESSIONAL_DOMAIN}
 
     sources:
       - crd
@@ -35,7 +34,7 @@ spec:
     interval: 10s
     policy: sync
     registry: txt
-    txtPrefix: "jsdyb-kube-001-"
+    txtPrefix: "k8s-001-"
     provider: cloudflare
 
     extraArgs:
