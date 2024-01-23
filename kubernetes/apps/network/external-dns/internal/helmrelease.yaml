@@ -33,7 +33,7 @@ spec:
     interval: 10s
     policy: sync
     registry: txt
-    txtPrefix: "jsdyb-kube-001-"
+    txtPrefix: "${CLUSTER_NAME}-"
     provider: rfc2136
 
     extraArgs:

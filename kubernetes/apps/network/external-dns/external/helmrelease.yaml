@@ -34,7 +34,7 @@ spec:
     interval: 10s
     policy: sync
     registry: txt
-    txtPrefix: "k8s-001-"
+    txtPrefix: "${CLUSTER_NAME}-"
     provider: cloudflare
 
     extraArgs:
