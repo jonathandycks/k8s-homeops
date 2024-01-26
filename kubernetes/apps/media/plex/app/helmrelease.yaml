@@ -159,7 +159,7 @@ spec:
         volumeSpec:
           nfs:
             server: "${SYNOLOGY_ADDR}"
-            path: /volume1/FileServer/_backups
+            path: /volume1/FileServer/_backups/plex
         mountPath: /config/Backups
         readOnly: false
 
