@@ -8,16 +8,6 @@ spec:
   path: "./"
   interval: 10m
   approvePlan: auto
-  backendConfig:
-    disable: true
-  cliConfigSecretRef:
-    name: tf-cloud-token
-    namespace: flux-system
-  cloud:
-    organization: "${ORGANIZATION}"
-    hostname: "app.terraform.io"
-    workspaces:
-      name: "authentik-provisioner"
   sourceRef:
     kind: OCIRepository
     name: oci-terraform-authentik
@@ -120,13 +110,6 @@ spec:
           client_secret: ${GF_AUTH_GENERIC_OAUTH_CLIENT_SECRET}
           redirect_uris: 
             - https://grafana.${EXTERNAL_DOMAIN}/login/generic_oauth
-        Node-Red:
-          url: https://grafana.${EXTERNAL_DOMAIN}
-          group: SelfHosted
-          client_id: nodered
-          client_secret: ${NODE_RED_OAUTH_CLIENT_SECRET}
-          redirect_uris: 
-            - https://nodered.${EXTERNAL_DOMAIN}/auth/strategy/callback
     - name: groups
       value:
         ${ORGANIZATION}-Admins:
@@ -139,7 +122,7 @@ spec:
           parent: "${ORGANIZATION}-Admins"
     - name: users
       value:
-        jefedavis:
+        jonathan:
           name: "${FULL_NAME}"
           email: "${EMAIL_ADDRESS}"
           groups:
