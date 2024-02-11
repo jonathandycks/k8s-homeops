@@ -6,6 +6,6 @@ metadata:
   namespace: flux-system
 spec:
   interval: 1m
-  url: oci://ghcr.io/jefedavis/terraform/authentik
+  url: oci://ghcr.io/jonathandycks/terraform/authentik
   ref:
     tag: main
