@@ -131,7 +131,7 @@ spec:
         mountPath: /etc/cont-config.d
         defaultMode: 493
       transcode:
-        enabled: true
+        enabled: false
         type: custom
         volumeSpec:
           ephemeral:
